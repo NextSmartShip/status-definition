@@ -19,5 +19,5 @@ export type InboundStatus =
 
 export interface Inbound {
   status: Record<InboundStatus, number>;
-  statusLabel: LabelDataType[]
+  statusLabels: LabelDataType[]
 }

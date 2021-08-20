@@ -6,5 +6,5 @@ export type ProductStatus =
 
 export interface Product {
   status: Record<ProductStatus, number>;
-  statusLabel: LabelDataType[]
+  statusLabels: LabelDataType[]
 }
