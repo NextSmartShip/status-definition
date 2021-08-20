@@ -1,3 +1,5 @@
+import { LabelDataType } from "./common";
+
 export type PickingOrderStatus =
   | 'NEW'
   | 'InQueue'
@@ -9,4 +11,5 @@ export type PickingOrderStatus =
 
 export interface PickingOrder {
   status: Record<PickingOrderStatus, number>;
+  statusLabels: LabelDataType[]
 }

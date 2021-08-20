@@ -1,3 +1,5 @@
+import { LabelDataType } from "./common";
+
 export type UnshelveStatus =
 | 'New'
 | 'Unshelving'
@@ -6,4 +8,5 @@ export type UnshelveStatus =
 
 export interface Unshelve {
   status: Record<UnshelveStatus, number>;
+  statusLabels: LabelDataType[]
 }

@@ -1,3 +1,5 @@
+import { LabelDataType } from "./common";
+
 export type InboundStatus =
 | 'Canceled'
 | 'Draft'
@@ -17,4 +19,5 @@ export type InboundStatus =
 
 export interface Inbound {
   status: Record<InboundStatus, number>;
+  statusLabel: LabelDataType[]
 }
