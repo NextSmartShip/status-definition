@@ -8,9 +8,21 @@ const inbound = require('./lib/inbound')
 
 const unshelve = require('./lib/unshelve')
 
+const channel = require('./lib/channel')
+
+const courierOrder = require('./lib/courierOrder')
+
+const pickingOrder = require('./lib/pickingOrder')
+
+const shelve = require('./lib/shelve')
+
 module.exports = {
   order,
   product,
   inbound,
-  unshelve
+  unshelve,
+  channel,
+  courierOrder,
+  pickingOrder,
+  shelve
 }
