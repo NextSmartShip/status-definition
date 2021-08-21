@@ -9,7 +9,7 @@ export type PickingOrderStatus =
   | 'Confirm'
   | 'ConfirmError';
 
-export interface PickingOrder {
+export type PickingOrder = {
   status: Record<PickingOrderStatus, number>;
   statusLabels: LabelDataType[]
 }

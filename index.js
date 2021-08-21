@@ -1,20 +1,24 @@
-'use strict'
+'use strict';
 
-const order = require('./lib/order')
+const order = require('./lib/order');
 
-const product = require('./lib/product')
+const product = require('./lib/product');
 
-const inbound = require('./lib/inbound')
+const inbound = require('./lib/inbound');
 
-const unshelve = require('./lib/unshelve')
+const unshelve = require('./lib/unshelve');
 
-const channel = require('./lib/channel')
+const channel = require('./lib/channel');
 
-const courierOrder = require('./lib/courierOrder')
+const courierOrder = require('./lib/courierOrder');
 
-const pickingOrder = require('./lib/pickingOrder')
+const pickingOrder = require('./lib/pickingOrder');
 
-const shelve = require('./lib/shelve')
+const shelve = require('./lib/shelve');
+
+const cycleCount = require('./lib/cycleCount');
+
+const countryCode = require('./lib/countryCode')
 
 module.exports = {
   order,
@@ -24,5 +28,7 @@ module.exports = {
   channel,
   courierOrder,
   pickingOrder,
-  shelve
-}
+  shelve,
+  cycleCount,
+  countryCode
+};

@@ -6,7 +6,7 @@ export type UnshelveStatus =
 | "PartialFinish"
 | "Finish"
 
-export interface Unshelve {
+export type Unshelve = {
   status: Record<UnshelveStatus, number>;
   statusLabels: LabelDataType[]
 }

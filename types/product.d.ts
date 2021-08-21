@@ -4,7 +4,7 @@ export type ProductStatus =
 | 'New'
 | 'Normal'
 
-export interface Product {
+export type Product = {
   status: Record<ProductStatus, number>;
   statusLabels: LabelDataType[]
 }

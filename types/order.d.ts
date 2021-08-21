@@ -19,7 +19,7 @@ export type OrderStatus =
 
 export type OrderCancelStatus = 'Normal' | 'Requested' | 'Intercepted' | 'Cancelled';
 
-export interface Order {
+export type Order = {
   status: Record<OrderStatus, number>;
   cancelStatus: Record<OrderCancelStatus, number>;
   statusLabels: LabelDataType[];

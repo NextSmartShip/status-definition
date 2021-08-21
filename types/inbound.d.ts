@@ -17,7 +17,7 @@ export type InboundStatus =
 | 'CompleteShelved'
 | 'Complete';
 
-export interface Inbound {
+export type Inbound = {
   status: Record<InboundStatus, number>;
   statusLabels: LabelDataType[]
 }

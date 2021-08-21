@@ -1,11 +1,13 @@
-import { Channel } from "./types/channel";
-import { CourierOrder } from "./types/courierOrder";
-import { Inbound } from "./types/inbound";
-import { Order } from "./types/order";
-import { PickingOrder } from "./types/pickingOrder";
-import { Product } from "./types/product";
-import { Shelve } from "./types/shelve";
-import { Unshelve } from "./types/unshelve";
+import type { Channel } from './types/channel';
+import type { CountryCode } from './types/countryCode';
+import type { CourierOrder } from './types/courierOrder';
+import type { CycleCount } from './types/cycleCount';
+import type { Inbound } from './types/inbound';
+import type { Order } from './types/order';
+import type { PickingOrder } from './types/pickingOrder';
+import type { Product } from './types/product';
+import type { Shelve } from './types/shelve';
+import type { Unshelve } from './types/unshelve';
 
 export const order: Order;
 
@@ -22,3 +24,7 @@ export const courierOrder: CourierOrder;
 export const pickingOrder: PickingOrder;
 
 export const shelve: Shelve;
+
+export const cycleCount: CycleCount;
+
+export const countryCode: CountryCode
