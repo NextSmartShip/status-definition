@@ -4,8 +4,8 @@ import type { Product, ProductStatus } from "../types/product"
 // TODO Add comments
 
 const status: Record<ProductStatus, number> = {
-  New: 0,
-  Normal: 1
+  New: 1,
+  Normal: 10
 };
 
 const statusLabels: LabelDataType[] = [

@@ -23,4 +23,4 @@ const statusDefinition: StatusDefinition = {
   countryCode,
 };
 
-export default statusDefinition
+export default statusDefinition;
