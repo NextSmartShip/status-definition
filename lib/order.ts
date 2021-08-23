@@ -1,8 +1,9 @@
-'use strict'
+import type { LabelDataType } from "../types/common";
+import type { Order, OrderCancelStatus, OrderStatus } from "../types/order";
 
 // TODO Add comments
 
-const status = {
+const status: Record<OrderStatus, number> = {
   Draft: 0,
   New: 1,
   ReadToShip: 10,
@@ -20,14 +21,14 @@ const status = {
   Closed: 100,
 };
 
-const cancelStatus = {
+const cancelStatus: Record<OrderCancelStatus, number> = {
   Normal: 0, // Normal
   Requested: 1, // Cancellation requesting
   Intercepted: 2, // Intercepted order
-  Cancelled: 3, 
-}
+  Cancelled: 3,
+};
 
-const statusLabels = [
+const statusLabels: LabelDataType[] = [
   { id: status.Draft, label: 'Draft' },
   { id: status.New, label: 'New' },
   { id: status.ReadToShip, label: 'Ready To Ship' },
@@ -44,16 +45,19 @@ const statusLabels = [
   { id: status.Cancelled, label: 'Cancelled' },
 ];
 
-const cancelStatusLabels = [
+const cancelStatusLabels: LabelDataType[] = [
   { id: cancelStatus.Normal, label: 'Normal' },
   { id: cancelStatus.Requested, label: 'Cancellation Requested' },
   { id: cancelStatus.Intercepted, label: 'Cancellation(Intercepted)' },
   { id: cancelStatus.Cancelled, label: 'Cancelled' },
-]
+];
 
-module.exports = {
+
+const order: Order = {
   status,
   cancelStatus,
   statusLabels,
   cancelStatusLabels
-}
+};
+
+export default order

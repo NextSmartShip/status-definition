@@ -24,4 +24,5 @@ export type Order = {
   cancelStatus: Record<OrderCancelStatus, number>;
   statusLabels: LabelDataType[];
   cancelStatusLabels: LabelDataType[]
-}
+};
+

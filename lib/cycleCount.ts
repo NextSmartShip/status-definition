@@ -1,12 +1,15 @@
-const status = {
+import type { LabelDataType } from "../types/common";
+import type { CycleCount, CycleCountStatus } from "../types/cycleCount";
+
+const status: Record<CycleCountStatus, number> = {
   New: 1,
   SendFailed: 8,
   SendSuccess: 10,
   ConfirmFailed: 14,
   Confirm: 15,
-}
+};
 
-const statusLabels = [
+const statusLabels: LabelDataType[] = [
   { id: status.New, label: 'New' },
   { id: status.SendFailed, label: 'Send WES Failed' },
   { id: status.SendSuccess, label: 'In WES' },
@@ -14,7 +17,9 @@ const statusLabels = [
   { id: status.Confirm, label: 'WES Confirmed' },
 ];
 
-module.exports = {
+const cycleCount: CycleCount = {
   status,
   statusLabels
-}
+};
+
+export default cycleCount;

@@ -1,8 +1,9 @@
-'use strict'
+import type { LabelDataType } from "../types/common";
+import type { Inbound, InboundStatus } from "../types/inbound";
 
 // TODO Add comments
 
-const status = {
+const status: Record<InboundStatus, number> = {
   Canceled: -1,
   Draft: 0,
   New: 1,
@@ -18,9 +19,9 @@ const status = {
   PartialShelved: 38,
   CompleteShelved: 40,
   Complete: 99,
-}
+};
 
-const statusLabels = [
+const statusLabels: LabelDataType[] = [
   { id: status.Canceled, label: 'Canceled' },
   { id: status.Draft, label: 'Draft' },
   { id: status.New, label: 'New' },
@@ -35,7 +36,9 @@ const statusLabels = [
   { id: status.Complete, label: 'Complete' },
 ];
 
-module.exports = {
+const inbound: Inbound = {
   status,
   statusLabels
-}
+};
+
+export default inbound;

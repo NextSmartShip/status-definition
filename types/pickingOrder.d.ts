@@ -1,7 +1,7 @@
 import { LabelDataType } from "./common";
 
 export type PickingOrderStatus =
-  | 'NEW'
+  | 'New'
   | 'InQueue'
   | 'SendFailed'
   | 'SendSuccess'
@@ -12,4 +12,5 @@ export type PickingOrderStatus =
 export type PickingOrder = {
   status: Record<PickingOrderStatus, number>;
   statusLabels: LabelDataType[]
-}
+};
+
