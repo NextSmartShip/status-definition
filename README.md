@@ -28,6 +28,13 @@ const PRODUCT_STATUSES = statusDefinition.product.status
 ```
 
 ### development
+eg
+```
+cd status-definition/
+## add or update status
+
+npm run build
+```
 when you added or updated some status definition, you can use follow command to test at you local
 eg
 ```
@@ -39,6 +46,7 @@ after the test is finished, commit you code, and update the package version, you
 eg
 ```
 cd status-definition/
+npm run build
 git add .
 git commit 
 git push
