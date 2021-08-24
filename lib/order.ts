@@ -6,7 +6,7 @@ import type { Order, OrderCancelStatus, OrderStatus } from "../types/order";
 const status: Record<OrderStatus, number> = {
   Draft: 0,
   New: 1,
-  ReadToShip: 10,
+  Ready: 10,
   RequestCourierLabel: 30,
   WaitingCourierLabelGenerated: 31,
   WaitingForUnShelving: 32,
@@ -32,7 +32,7 @@ const cancelStatus: Record<OrderCancelStatus, number> = {
 const statusLabels: LabelDataType[] = [
   { id: status.Draft, label: 'Draft' },
   { id: status.New, label: 'New' },
-  { id: status.ReadToShip, label: 'Ready To Ship' },
+  { id: status.Ready, label: 'Ready To Ship' },
   { id: status.RequestCourierLabel, label: 'Request Courier Label' },
   { id: status.WaitingCourierLabelGenerated, label: 'Waiting Courier Label Generated' },
   { id: status.WaitingForUnShelving, label: 'waiting for unshelving' },

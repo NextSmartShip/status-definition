@@ -3,7 +3,7 @@ import { LabelDataType } from "./common";
 export type OrderStatus =
 | 'Draft'
 | 'New'
-| 'ReadToShip'
+| 'Ready'
 | 'RequestCourierLabel'
 | 'WaitingCourierLabelGenerated'
 | 'WaitingForUnShelving'
