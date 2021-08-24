@@ -8,6 +8,7 @@
     "lib": "lib"
   },
   "files": [
+    "index.d.ts",
     "lib",
     "dist",
     "types"
