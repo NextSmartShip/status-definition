@@ -1,7 +1,6 @@
 import { LabelDataType } from "./common";
 
 export type OrderStatus =
-| 'Draft'
 | 'New'
 | 'Ready'
 | 'RequestCourierLabel'
@@ -12,11 +11,7 @@ export type OrderStatus =
 | 'Packaging'
 | 'Fulfilled'
 | 'Shipped'
-| 'InTransit'
 | 'Delivered'
-| 'Intercepted'
-| 'Cancelled'
-| 'Closed';
 
 export type OrderCancelStatus = 'Normal' | 'Requested' | 'Intercepted' | 'Cancelled';
 

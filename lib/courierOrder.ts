@@ -1,12 +1,12 @@
 import type { CourierOrder, CourierOrderStatus } from "../types/courierOrder";
 
 const status: Record<CourierOrderStatus, string> = {
-  NEW: 'N',
-  READY: 'R',
-  FAILED: 'F',
-  SUCCESS: 'S',
-  COMPLETED: 'C',
-  CANCELED: 'CL',
+  New: 'N',
+  Ready: 'R',
+  Failed: 'F',
+  Success: 'S',
+  Completed: 'C',
+  Canceled: 'CL',
 };
 
 const courierOrder: CourierOrder = {
@@ -14,4 +14,3 @@ const courierOrder: CourierOrder = {
 };
 
 export default courierOrder;
-

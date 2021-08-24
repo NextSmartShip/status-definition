@@ -11,6 +11,7 @@ const status: Record<UnshelveStatus, number> = {
 
 const statusLabels: LabelDataType[] = [
   { id: status.New, label: 'New' },
+  { id: status.Unshelving, label: 'Unshelving' },
   { id: status.PartialFinish, label: 'Partial Shipped' },
   { id: status.Finish, label: 'Finish' },
 ];
