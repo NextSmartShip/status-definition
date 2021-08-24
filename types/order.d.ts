@@ -12,6 +12,7 @@ export type OrderStatus =
 | 'Packaging'
 | 'Fulfilled'
 | 'Shipped'
+| 'InTransit'
 | 'Delivered'
 | 'Intercepted'
 | 'Cancelled'
