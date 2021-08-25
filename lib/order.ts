@@ -1,5 +1,5 @@
-import type { LabelDataType } from "../types/common";
-import type { Order, OrderCancelStatus, OrderStatus } from "../types/order";
+import type { LabelDataType } from '../types/common';
+import type { Order, OrderCancelStatus, OrderStatus } from '../types/order';
 
 // TODO Add comments
 
@@ -45,12 +45,11 @@ const cancelStatusLabels: LabelDataType[] = [
   { id: cancelStatus.Cancelled, label: 'Cancelled' },
 ];
 
-
 const order: Order = {
   status,
   cancelStatus,
   statusLabels,
-  cancelStatusLabels
+  cancelStatusLabels,
 };
 
-export default order
+export default order;

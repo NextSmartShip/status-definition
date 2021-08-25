@@ -9,6 +9,6 @@ const status = {
     Canceled: 'CL',
 };
 const courierOrder = {
-    status
+    status,
 };
 exports.default = courierOrder;

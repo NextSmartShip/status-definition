@@ -1,5 +1,5 @@
-import type { LabelDataType } from "../types/common";
-import type { CycleCount, CycleCountStatus } from "../types/cycleCount";
+import type { LabelDataType } from '../types/common';
+import type { CycleCount, CycleCountStatus } from '../types/cycleCount';
 
 const status: Record<CycleCountStatus, number> = {
   New: 1,
@@ -19,7 +19,7 @@ const statusLabels: LabelDataType[] = [
 
 const cycleCount: CycleCount = {
   status,
-  statusLabels
+  statusLabels,
 };
 
 export default cycleCount;

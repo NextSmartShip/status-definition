@@ -10,6 +10,6 @@ const statusLabels = [
 ];
 const countryCode = {
     status,
-    statusLabels
+    statusLabels,
 };
 exports.default = countryCode;

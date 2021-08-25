@@ -3,4 +3,3 @@ export type ShelveStatus = 'New' | 'SentFailed' | 'Sent' | 'Pending' | 'PartialS
 export type Shelve = {
   status: Record<ShelveStatus, number>;
 };
-

@@ -1,5 +1,5 @@
-import type { LabelDataType } from "../types/common";
-import  type { PickingOrder, PickingOrderStatus } from "../types/pickingOrder";
+import type { LabelDataType } from '../types/common';
+import type { PickingOrder, PickingOrderStatus } from '../types/pickingOrder';
 
 const status: Record<PickingOrderStatus, number> = {
   New: 1,
@@ -21,10 +21,9 @@ const statusLabels: LabelDataType[] = [
   { id: status.ConfirmError, label: 'WES Confirmed Error' },
 ];
 
-
 const pickingOrder: PickingOrder = {
   status,
-  statusLabels
+  statusLabels,
 };
 
 export default pickingOrder;

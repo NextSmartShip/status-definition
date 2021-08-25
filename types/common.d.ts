@@ -1,4 +1,4 @@
 export type LabelDataType = {
-  id: number,
-  label: string
+  id: number;
+  label: string;
 };

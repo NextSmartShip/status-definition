@@ -1,4 +1,4 @@
-import type { CourierOrder, CourierOrderStatus } from "../types/courierOrder";
+import type { CourierOrder, CourierOrderStatus } from '../types/courierOrder';
 
 const status: Record<CourierOrderStatus, string> = {
   New: 'N',
@@ -10,7 +10,7 @@ const status: Record<CourierOrderStatus, string> = {
 };
 
 const courierOrder: CourierOrder = {
-  status
+  status,
 };
 
 export default courierOrder;

@@ -14,6 +14,6 @@ const statusLabels = [
 ];
 const unshelve = {
     status,
-    statusLabels
+    statusLabels,
 };
 exports.default = unshelve;

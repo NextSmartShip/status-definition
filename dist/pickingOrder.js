@@ -20,6 +20,6 @@ const statusLabels = [
 ];
 const pickingOrder = {
     status,
-    statusLabels
+    statusLabels,
 };
 exports.default = pickingOrder;

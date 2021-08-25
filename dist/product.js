@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const status = {
     New: 1,
-    Normal: 10
+    Normal: 10,
 };
 const statusLabels = [
     { id: status.New, label: 'New' },
@@ -10,6 +10,6 @@ const statusLabels = [
 ];
 const product = {
     status,
-    statusLabels
+    statusLabels,
 };
 exports.default = product;

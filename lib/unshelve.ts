@@ -1,5 +1,5 @@
-import { LabelDataType } from "../types/common";
-import type { Unshelve, UnshelveStatus } from "../types/unshelve";
+import { LabelDataType } from '../types/common';
+import type { Unshelve, UnshelveStatus } from '../types/unshelve';
 
 // TODO Add comments
 const status: Record<UnshelveStatus, number> = {
@@ -18,7 +18,7 @@ const statusLabels: LabelDataType[] = [
 
 const unshelve: Unshelve = {
   status,
-  statusLabels
+  statusLabels,
 };
 
 export default unshelve;

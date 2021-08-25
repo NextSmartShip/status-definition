@@ -1,4 +1,4 @@
-import type { Shelve, ShelveStatus } from "../types/shelve";
+import type { Shelve, ShelveStatus } from '../types/shelve';
 
 const status: Record<ShelveStatus, number> = {
   New: 1, // 初始
@@ -9,9 +9,8 @@ const status: Record<ShelveStatus, number> = {
   Finish: 40, // 上架完成
 };
 
-
 const shelve: Shelve = {
-  status
+  status,
 };
 
 export default shelve;

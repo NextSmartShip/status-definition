@@ -1,11 +1,11 @@
-import { LabelDataType } from "../types/common"
-import type { Product, ProductStatus } from "../types/product"
+import { LabelDataType } from '../types/common';
+import type { Product, ProductStatus } from '../types/product';
 
 // TODO Add comments
 
 const status: Record<ProductStatus, number> = {
   New: 1,
-  Normal: 10
+  Normal: 10,
 };
 
 const statusLabels: LabelDataType[] = [
@@ -15,7 +15,7 @@ const statusLabels: LabelDataType[] = [
 
 const product: Product = {
   status,
-  statusLabels
+  statusLabels,
 };
 
 export default product;

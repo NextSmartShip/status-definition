@@ -1,5 +1,5 @@
-import type { LabelDataType } from "../types/common";
-import type { CountryCode, CountryCodeStatus } from "../types/countryCode";
+import type { LabelDataType } from '../types/common';
+import type { CountryCode, CountryCodeStatus } from '../types/countryCode';
 
 const status: Record<CountryCodeStatus, number> = {
   Operating: 1,
@@ -13,7 +13,7 @@ const statusLabels: LabelDataType[] = [
 
 const countryCode: CountryCode = {
   status,
-  statusLabels
+  statusLabels,
 };
 
 export default countryCode;

@@ -9,6 +9,6 @@ const status = {
     Finish: 40,
 };
 const shelve = {
-    status
+    status,
 };
 exports.default = shelve;

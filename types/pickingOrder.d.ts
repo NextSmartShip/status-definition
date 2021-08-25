@@ -1,4 +1,4 @@
-import { LabelDataType } from "./common";
+import { LabelDataType } from './common';
 
 export type PickingOrderStatus =
   | 'New'
@@ -11,6 +11,5 @@ export type PickingOrderStatus =
 
 export type PickingOrder = {
   status: Record<PickingOrderStatus, number>;
-  statusLabels: LabelDataType[]
+  statusLabels: LabelDataType[];
 };
-

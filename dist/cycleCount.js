@@ -16,6 +16,6 @@ const statusLabels = [
 ];
 const cycleCount = {
     status,
-    statusLabels
+    statusLabels,
 };
 exports.default = cycleCount;

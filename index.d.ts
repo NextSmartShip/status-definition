@@ -1,4 +1,4 @@
-import { StatusDefinition } from "./types";
+import { StatusDefinition } from './types';
 
 declare const statusDefinition: StatusDefinition;
 

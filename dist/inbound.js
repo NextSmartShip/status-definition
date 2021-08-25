@@ -26,8 +26,8 @@ const statusLabels = [
     { id: status.CloseReceived, label: 'Close Received' },
     { id: status.PartialReceived, label: 'Partial Received' },
     { id: status.CompleteReceived, label: 'Complete Received' },
-    { id: status.WaitingConfirm, label: "Waiting Confirm" },
-    { id: status.WaitingShelve, label: "Waiting Shelve" },
+    { id: status.WaitingConfirm, label: 'Waiting Confirm' },
+    { id: status.WaitingShelve, label: 'Waiting Shelve' },
     { id: status.StartShelved, label: 'Start Shelved' },
     { id: status.PartialShelved, label: 'Partial Shelved' },
     { id: status.CompleteShelved, label: 'Complete Received' },
@@ -35,6 +35,6 @@ const statusLabels = [
 ];
 const inbound = {
     status,
-    statusLabels
+    statusLabels,
 };
 exports.default = inbound;

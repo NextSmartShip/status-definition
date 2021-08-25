@@ -42,6 +42,6 @@ const order = {
     status,
     cancelStatus,
     statusLabels,
-    cancelStatusLabels
+    cancelStatusLabels,
 };
 exports.default = order;
