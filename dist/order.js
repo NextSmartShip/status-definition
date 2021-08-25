@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const status = {
-    Draft: 0,
     New: 1,
     Ready: 10,
     RequestCourierLabel: 30,
@@ -12,11 +11,7 @@ const status = {
     Packaging: 35,
     Fulfilled: 38,
     Shipped: 50,
-    InTransit: 55,
     Delivered: 60,
-    Intercepted: 90,
-    Cancelled: 99,
-    Closed: 100,
 };
 const cancelStatus = {
     Normal: 0,
@@ -25,9 +20,8 @@ const cancelStatus = {
     Cancelled: 3,
 };
 const statusLabels = [
-    { id: status.Draft, label: 'Draft' },
     { id: status.New, label: 'New' },
-    { id: status.Ready, label: 'Ready To Ship' },
+    { id: status.Ready, label: 'Ready' },
     { id: status.RequestCourierLabel, label: 'Request Courier Label' },
     { id: status.WaitingCourierLabelGenerated, label: 'Waiting Courier Label Generated' },
     { id: status.WaitingForUnShelving, label: 'waiting for unshelving' },
@@ -36,10 +30,7 @@ const statusLabels = [
     { id: status.Packaging, label: 'Packaging' },
     { id: status.Fulfilled, label: 'Fulfilled' },
     { id: status.Shipped, label: 'Shipped' },
-    { id: status.InTransit, label: 'InTransit' },
     { id: status.Delivered, label: 'Delivered' },
-    { id: status.Intercepted, label: 'Intercepted' },
-    { id: status.Cancelled, label: 'Cancelled' },
 ];
 const cancelStatusLabels = [
     { id: cancelStatus.Normal, label: 'Normal' },

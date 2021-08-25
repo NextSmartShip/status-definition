@@ -1,11 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const status = {
-    NEW: 1,
-    SENT_FAILED: 19,
-    SENT: 20,
-    PENDING: 30,
-    FINISH: 40,
+    New: 1,
+    SentFailed: 19,
+    Sent: 20,
+    Pending: 30,
+    PartialShelve: 38,
+    Finish: 40,
 };
 const shelve = {
     status
