@@ -19,6 +19,11 @@ const cancelStatus = {
     Intercepted: 2,
     Cancelled: 3,
 };
+const paymentStatus = {
+    WaitingConfirm: 1,
+    Confirmed: 5,
+    Deducted: 10,
+};
 const statusLabels = [
     { id: status.New, label: 'New' },
     { id: status.Ready, label: 'Ready' },
@@ -41,6 +46,7 @@ const cancelStatusLabels = [
 const order = {
     status,
     cancelStatus,
+    paymentStatus,
     statusLabels,
     cancelStatusLabels,
 };
