@@ -15,9 +15,12 @@ export type OrderStatus =
 
 export type OrderCancelStatus = 'Normal' | 'Requested' | 'Intercepted' | 'Cancelled';
 
+export type OrderPaymentStatus = 'WaitingConfirm' | 'Confirmed' | 'Deducted';
+
 export type Order = {
   status: Record<OrderStatus, number>;
   cancelStatus: Record<OrderCancelStatus, number>;
+  paymentStatus: Record<OrderPaymentStatus, number>;
   statusLabels: LabelDataType[];
   cancelStatusLabels: LabelDataType[];
 };
