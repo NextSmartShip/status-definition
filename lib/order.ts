@@ -1,5 +1,5 @@
 import type { LabelDataType } from '../types/common';
-import type { Order, OrderCancelStatus, OrderStatus } from '../types/order';
+import type { Order, OrderCancelStatus, OrderPaymentStatus, OrderStatus } from '../types/order';
 
 // TODO Add comments
 
@@ -22,6 +22,12 @@ const cancelStatus: Record<OrderCancelStatus, number> = {
   Requested: 1, // Cancellation requesting
   Intercepted: 2, // Intercepted order
   Cancelled: 3,
+};
+
+const paymentStatus: Record<OrderPaymentStatus, number> = {
+  WaitingConfirm: 1,
+  Confirmed: 5,
+  Deducted: 10,
 };
 
 const statusLabels: LabelDataType[] = [
@@ -48,6 +54,7 @@ const cancelStatusLabels: LabelDataType[] = [
 const order: Order = {
   status,
   cancelStatus,
+  paymentStatus,
   statusLabels,
   cancelStatusLabels,
 };
