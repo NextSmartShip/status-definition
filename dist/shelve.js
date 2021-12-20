@@ -6,6 +6,7 @@ const status = {
     Sent: 20,
     Pending: 30,
     PartialShelve: 38,
+    Close: 39,
     Finish: 40,
 };
 const shelve = {
