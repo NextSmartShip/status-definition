@@ -14,7 +14,7 @@ const status: Record<OrderStatus, number> = {
   Packaging: 35,
   Fulfilled: 38,
   Shipped: 50,
-  Delivered: 60,
+  Delivered: 80,
 };
 
 const cancelStatus: Record<OrderCancelStatus, number> = {
