@@ -2,6 +2,7 @@ import type { LabelDataType } from '../types/common';
 import type { Order, OrderCancelStatus, OrderPaymentStatus, OrderStatus } from '../types/order';
 
 // TODO Add comments
+
 // 新版-订单状态：
 export enum ENUM_NEW_ORDERS_STATUS {
   // 待下架
@@ -21,7 +22,12 @@ export enum ENUM_NEW_ORDERS_STATUS {
   // 已发货.
   ORDER_STATUS_SHIPPED = 50,
 }
-
+export const getOrderStatus = (
+  keyOrValue: keyof typeof ENUM_NEW_ORDERS_STATUS | ENUM_NEW_ORDERS_STATUS
+): string | ENUM_NEW_ORDERS_STATUS => {
+  if (typeof keyOrValue === 'number') return ENUM_NEW_ORDERS_STATUS[keyOrValue];
+  return ENUM_NEW_ORDERS_STATUS[keyOrValue];
+};
 const status: Record<OrderStatus, number> = {
   New: 1,
   Ready: 10,
