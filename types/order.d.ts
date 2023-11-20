@@ -1,3 +1,4 @@
+import { ENUM_NEW_ORDERS_STATUS, getOrderStatus } from '../lib/order';
 import { LabelDataType } from './common';
 
 export type OrderStatus =
@@ -23,4 +24,6 @@ export type Order = {
   paymentStatus: Record<OrderPaymentStatus, number>;
   statusLabels: LabelDataType[];
   cancelStatusLabels: LabelDataType[];
+  ENUM_NEW_ORDERS_STATUS?: ENUM_NEW_ORDERS_STATUS;
+  getOrderStatus?: typeof getOrderStatus;
 };
