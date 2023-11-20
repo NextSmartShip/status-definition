@@ -6,7 +6,7 @@ const status: Record<ShelveStatus, number> = {
   Sent: 20, // 已发送至快仓WES
   Pending: 30, // 上架中
   PartialShelve: 38,
-  Close: 39,//快仓关闭上架=confirm上架数量为0
+  Close: 39, // 快仓关闭上架=confirm上架数量为0
   Finish: 40, // 上架完成
 };
 
