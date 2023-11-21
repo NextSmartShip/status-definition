@@ -13,8 +13,9 @@ var ENUM_NEW_ORDERS_STATUS;
     ENUM_NEW_ORDERS_STATUS[ENUM_NEW_ORDERS_STATUS["ORDER_STATUS_SHIPPED"] = 50] = "ORDER_STATUS_SHIPPED";
 })(ENUM_NEW_ORDERS_STATUS = exports.ENUM_NEW_ORDERS_STATUS || (exports.ENUM_NEW_ORDERS_STATUS = {}));
 const getOrderStatus = (keyOrValue) => {
-    if (typeof keyOrValue === 'number')
-        return ENUM_NEW_ORDERS_STATUS[keyOrValue];
+    if (Array.isArray(keyOrValue)) {
+        return keyOrValue.map((item) => ENUM_NEW_ORDERS_STATUS[item]);
+    }
     return ENUM_NEW_ORDERS_STATUS[keyOrValue];
 };
 exports.getOrderStatus = getOrderStatus;

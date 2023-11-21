@@ -24,8 +24,11 @@ export enum ENUM_NEW_ORDERS_STATUS {
 }
 export const getOrderStatus = (
   keyOrValue: keyof typeof ENUM_NEW_ORDERS_STATUS | ENUM_NEW_ORDERS_STATUS
-): string | ENUM_NEW_ORDERS_STATUS => {
-  if (typeof keyOrValue === 'number') return ENUM_NEW_ORDERS_STATUS[keyOrValue];
+): string | string[] | ENUM_NEW_ORDERS_STATUS => {
+  // if (typeof keyOrValue === 'number') return ENUM_NEW_ORDERS_STATUS[keyOrValue];
+  if (Array.isArray(keyOrValue)) {
+    return keyOrValue.map((item) => ENUM_NEW_ORDERS_STATUS[item]);
+  }
   return ENUM_NEW_ORDERS_STATUS[keyOrValue];
 };
 const status: Record<OrderStatus, number> = {
