@@ -1,37 +1,10 @@
 import type { LabelDataType } from '../types/common';
-import type { Order, OrderCancelStatus, OrderPaymentStatus, OrderStatus } from '../types/order';
+import type { Order, OrderCancelStatus, OrderPaymentStatus, OrderStatus as KeyOrderStatusType } from '../types/order';
 
+import NewOrderStatus from './order_status';
 // TODO Add comments
 
-// 新版-订单状态：
-export enum ENUM_NEW_ORDERS_STATUS {
-  // 待下架
-  ORDER_STATUS_WAITING_FOR_PICKING = 32,
-  // 下架中
-  ORDER_STATUS_PICKING = 33,
-  // 下架完成
-  ORDER_STATUS_PICKED = 34,
-  // 配货中
-  ORDER_STATUS_FULFILLING = 35,
-  // 待复核(配货完成)
-  ORDER_STATUS_TO_RECHECK = 36,
-  // 复核中
-  ORDER_STATUS_RECHECKING = 37,
-  // 待签出(复核完成)
-  ORDER_STATUS_TO_SIGN_OFF = 38,
-  // 已发货.
-  ORDER_STATUS_SHIPPED = 50,
-}
-export const getOrderStatus = (
-  keyOrValue: keyof typeof ENUM_NEW_ORDERS_STATUS | ENUM_NEW_ORDERS_STATUS
-): string | string[] | ENUM_NEW_ORDERS_STATUS => {
-  // if (typeof keyOrValue === 'number') return ENUM_NEW_ORDERS_STATUS[keyOrValue];
-  if (Array.isArray(keyOrValue)) {
-    return keyOrValue.map((item) => ENUM_NEW_ORDERS_STATUS[item]);
-  }
-  return ENUM_NEW_ORDERS_STATUS[keyOrValue];
-};
-const status: Record<OrderStatus, number> = {
+const status: Record<KeyOrderStatusType, number> = {
   New: 1,
   Ready: 10,
   RequestCourierLabel: 30,
@@ -85,6 +58,7 @@ const order: Order = {
   paymentStatus,
   statusLabels,
   cancelStatusLabels,
+  ...NewOrderStatus,
 };
 
 export default order;

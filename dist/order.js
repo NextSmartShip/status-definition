@@ -1,24 +1,9 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.getOrderStatus = exports.ENUM_NEW_ORDERS_STATUS = void 0;
-var ENUM_NEW_ORDERS_STATUS;
-(function (ENUM_NEW_ORDERS_STATUS) {
-    ENUM_NEW_ORDERS_STATUS[ENUM_NEW_ORDERS_STATUS["ORDER_STATUS_WAITING_FOR_PICKING"] = 32] = "ORDER_STATUS_WAITING_FOR_PICKING";
-    ENUM_NEW_ORDERS_STATUS[ENUM_NEW_ORDERS_STATUS["ORDER_STATUS_PICKING"] = 33] = "ORDER_STATUS_PICKING";
-    ENUM_NEW_ORDERS_STATUS[ENUM_NEW_ORDERS_STATUS["ORDER_STATUS_PICKED"] = 34] = "ORDER_STATUS_PICKED";
-    ENUM_NEW_ORDERS_STATUS[ENUM_NEW_ORDERS_STATUS["ORDER_STATUS_FULFILLING"] = 35] = "ORDER_STATUS_FULFILLING";
-    ENUM_NEW_ORDERS_STATUS[ENUM_NEW_ORDERS_STATUS["ORDER_STATUS_TO_RECHECK"] = 36] = "ORDER_STATUS_TO_RECHECK";
-    ENUM_NEW_ORDERS_STATUS[ENUM_NEW_ORDERS_STATUS["ORDER_STATUS_RECHECKING"] = 37] = "ORDER_STATUS_RECHECKING";
-    ENUM_NEW_ORDERS_STATUS[ENUM_NEW_ORDERS_STATUS["ORDER_STATUS_TO_SIGN_OFF"] = 38] = "ORDER_STATUS_TO_SIGN_OFF";
-    ENUM_NEW_ORDERS_STATUS[ENUM_NEW_ORDERS_STATUS["ORDER_STATUS_SHIPPED"] = 50] = "ORDER_STATUS_SHIPPED";
-})(ENUM_NEW_ORDERS_STATUS = exports.ENUM_NEW_ORDERS_STATUS || (exports.ENUM_NEW_ORDERS_STATUS = {}));
-const getOrderStatus = (keyOrValue) => {
-    if (Array.isArray(keyOrValue)) {
-        return keyOrValue.map((item) => ENUM_NEW_ORDERS_STATUS[item]);
-    }
-    return ENUM_NEW_ORDERS_STATUS[keyOrValue];
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-exports.getOrderStatus = getOrderStatus;
+Object.defineProperty(exports, "__esModule", { value: true });
+const order_status_1 = __importDefault(require("./order_status"));
 const status = {
     New: 1,
     Ready: 10,
@@ -62,11 +47,9 @@ const cancelStatusLabels = [
     { id: cancelStatus.Intercepted, label: 'Cancellation(Intercepted)' },
     { id: cancelStatus.Cancelled, label: 'Cancelled' },
 ];
-const order = {
-    status,
+const order = Object.assign({ status,
     cancelStatus,
     paymentStatus,
     statusLabels,
-    cancelStatusLabels,
-};
+    cancelStatusLabels }, order_status_1.default);
 exports.default = order;
