@@ -1,6 +1,14 @@
 import { ValueOf } from '..';
 // 新版-订单状态：
 export enum ENUM_NEW_ORDERS_STATUS {
+  // 新建
+  ORDER_STATUS_NEW = 1,
+  // 准备发货
+  ORDER_STATUS_READY = 10,
+  // 请求渠道面单
+  ORDER_STATUS_REQUEST_COURIER_LABEL = 30,
+  // 等待生成面单
+  ORDER_STATUS_WAITING_COURIER_LABEL_GENERATED = 31,
   // 待下架
   ORDER_STATUS_WAITING_FOR_PICKING = 32,
   // 下架中
