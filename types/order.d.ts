@@ -9,6 +9,8 @@ export type OrderStatus =
   | 'WaitingForUnShelving'
   | 'UnShelving'
   | 'UnShelved'
+  | 'ToRecheck'
+  | 'Rechecking'
   | 'Packaging'
   | 'Fulfilled'
   | 'Shipped'
