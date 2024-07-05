@@ -1,8 +1,6 @@
 import { ValueOf } from '..';
 // 新版-订单状态：
 export enum ENUM_NEW_ORDERS_STATUS {
-  // 新建
-  ORDER_STATUS_NEW = 1,
   // 准备发货
   ORDER_STATUS_READY = 10,
   // 请求渠道面单
