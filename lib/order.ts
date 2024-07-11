@@ -5,7 +5,6 @@ import NewOrderStatus from './order_status';
 // TODO Add comments
 
 const status: Record<KeyOrderStatusType, number> = {
-  New: 1,
   Ready: 10,
   RequestCourierLabel: 30,
   WaitingCourierLabelGenerated: 31,
@@ -34,7 +33,6 @@ const paymentStatus: Record<OrderPaymentStatus, number> = {
 };
 
 const statusLabels: LabelDataType[] = [
-  { id: status.New, label: 'New' },
   { id: status.Ready, label: 'Ready' },
   { id: status.RequestCourierLabel, label: 'Request Courier Label' },
   { id: status.WaitingCourierLabelGenerated, label: 'Waiting Courier Label Generated' },

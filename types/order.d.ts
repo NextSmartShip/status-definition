@@ -2,7 +2,6 @@ import { ENUM_NEW_ORDERS_STATUS, getOrderStatus } from '../lib/order';
 import { LabelDataType } from './common';
 
 export type OrderStatus =
-  | 'New'
   | 'Ready'
   | 'RequestCourierLabel'
   | 'WaitingCourierLabelGenerated'
