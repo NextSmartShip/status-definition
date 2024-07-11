@@ -5,7 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const order_status_1 = __importDefault(require("./order_status"));
 const status = {
-    New: 1,
     Ready: 10,
     RequestCourierLabel: 30,
     WaitingCourierLabelGenerated: 31,
@@ -31,7 +30,6 @@ const paymentStatus = {
     Deducted: 10,
 };
 const statusLabels = [
-    { id: status.New, label: 'New' },
     { id: status.Ready, label: 'Ready' },
     { id: status.RequestCourierLabel, label: 'Request Courier Label' },
     { id: status.WaitingCourierLabelGenerated, label: 'Waiting Courier Label Generated' },
