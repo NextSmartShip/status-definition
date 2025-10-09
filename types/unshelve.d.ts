@@ -1,8 +1,5 @@
-import { LabelDataType } from './common';
-
-export type UnshelveStatus = 'New' | 'Unshelving' | 'PartialFinish' | 'Finish';
+import { UnshelveStatusEnum } from '../lib/unshelve';
 
 export type Unshelve = {
-  status: Record<UnshelveStatus, number>;
-  statusLabels: LabelDataType[];
+  statusEnum: typeof UnshelveStatusEnum;
 };

@@ -1,24 +1,11 @@
-import { LabelDataType } from '../types/common';
-import type { Unshelve, UnshelveStatus } from '../types/unshelve';
-
-// TODO Add comments
-const status: Record<UnshelveStatus, number> = {
-  New: 1,
-  Unshelving: 2,
-  PartialFinish: 5,
-  Finish: 10,
-};
-
-const statusLabels: LabelDataType[] = [
-  { id: status.New, label: 'New' },
-  { id: status.Unshelving, label: 'Unshelving' },
-  { id: status.PartialFinish, label: 'Partial Shipped' },
-  { id: status.Finish, label: 'Finish' },
-];
-
-const unshelve: Unshelve = {
-  status,
-  statusLabels,
+export enum UnshelveStatusEnum {
+  NEW = 'NEW',
+  PICKING = 'PICKING',
+  PARTIAL_FINISHED = 'PARTIAL_FINISHED',
+  FINISHED = 'FINISHED',
+}
+const unshelve = {
+  statusEnum: UnshelveStatusEnum,
 };
 
 export default unshelve;
