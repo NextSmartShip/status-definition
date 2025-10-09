@@ -8,7 +8,14 @@ var UnshelveStatusEnum;
     UnshelveStatusEnum["PARTIAL_FINISHED"] = "PARTIAL_FINISHED";
     UnshelveStatusEnum["FINISHED"] = "FINISHED";
 })(UnshelveStatusEnum = exports.UnshelveStatusEnum || (exports.UnshelveStatusEnum = {}));
+const status = {
+    [UnshelveStatusEnum.NEW]: UnshelveStatusEnum.NEW,
+    [UnshelveStatusEnum.PICKING]: UnshelveStatusEnum.PICKING,
+    [UnshelveStatusEnum.PARTIAL_FINISHED]: UnshelveStatusEnum.PARTIAL_FINISHED,
+    [UnshelveStatusEnum.FINISHED]: UnshelveStatusEnum.FINISHED,
+};
 const unshelve = {
+    status,
     statusEnum: UnshelveStatusEnum,
 };
 exports.default = unshelve;
